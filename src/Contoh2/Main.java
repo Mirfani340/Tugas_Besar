@@ -10,13 +10,13 @@ public class Main {
 
         Queue queue = new Queue(3);
 
-        System.out.println("\n\t\t=======================================================================================");
+        System.out.println("\n\t\t===========================================================");
         System.out.println("\t\t\t\t\t Selamat datang di Bank Danamon");
         System.out.println("\t\t\t\t\tMemberikan pelayanan yang terbaik");
-        System.out.println("\t\t=======================================================================================");
+        System.out.println("\t\t=============================================================");
 
         do{
-            System.out.println("\n\n");
+            System.out.println("\n");
             System.out.println("\t\t\t\t\tPilih menu : ");
             System.out.println("\t\t\t\t1. Pengambilan nomor antri");
             System.out.println("\t\t\t\t2. Pemanggilan nomor antri");
