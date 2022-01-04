@@ -6,7 +6,7 @@ public class Queue extends Keperluan {
 
     String[] data;
     int head = 0;
-    int flag = 0;
+    int flag = 1;
 
     public Queue(int jumlah) {
         data = new String[jumlah];

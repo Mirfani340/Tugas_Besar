@@ -1,4 +1,4 @@
-package Sample;
+package Test.Sample;
 
 public class LinkedList {
 
