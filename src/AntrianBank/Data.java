@@ -14,14 +14,19 @@ public class Data {
     Queue<String> ListKeperluan = new LinkedList<>();
     Queue<Integer> ListNo = new LinkedList<>();
 
-    public void SetNama() {
-        System.out.print("\n\t\t\t\tNama \t\t: ");
+
+public void SetNama() {
+        System.out.print("\t\t\tNama : ");
         nama = input.nextLine();
         ListNama.add(nama);
     }
 
     public void SetKeperluan() {
+
         System.out.print("\t\t\t\tKeperluan \t: ");
+
+        System.out.print("\t\t\tKeperluan : ");
+
         keperluan = input.nextLine();
         ListKeperluan.add(keperluan);
     }
@@ -43,6 +48,7 @@ public class Data {
                 System.out.println("\n");
             }
             System.out.print("\t\t\t========================================================");
+            System.out.println("Maaf Data Masih Kosong");
         }
     }
 
