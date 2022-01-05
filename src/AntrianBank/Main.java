@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Queue queue = new Queue();
+        Riwayat riwayat = new Riwayat();
         try (Scanner input = new Scanner(System.in)) {
 
             System.out.println("\n\t\t============================================================");
@@ -18,13 +19,15 @@ public class Main {
                 System.out.println("\n\t\t\t\t1. Pengambilan nomor antri");
                 System.out.println("\t\t\t\t2. Pemanggilan nomor antri");
                 System.out.println("\t\t\t\t3. Lihat data antrian");
-                System.out.println("\t\t\t\t4. Keluar");
+                System.out.println("\t\t\t\t4. Cek Riwayat");
+                System.out.println("\t\t\t\t5. Keluar");
                 System.out.print("\n\t\tPilihan Anda : ");
 
                 menu = input.nextInt();
 
                 if(menu==1){
                     queue.SetNo();
+                    riwayat.NoRiwayat();
                     queue.SetNama();
                     queue.SetKeperluan();
                 }else if(menu==2){
@@ -32,6 +35,8 @@ public class Main {
                 }else if(menu==3){
                     queue.GetData();
                 }else if(menu==4){
+                    riwayat.GetRiwayat();
+                }else if(menu==5){
                     System.out.println("\n\t\t\t\tTerimakasih!!!!");
                 }else{
                     System.out.println("\n\t\t\t\tPerhatikan data yang Anda inputkan!!!!");

@@ -1,5 +1,6 @@
 package AntrianBank;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Queue;
@@ -14,11 +15,16 @@ public class Data {
     Queue<String> ListKeperluan = new LinkedList<>();
     Queue<Integer> ListNo = new LinkedList<>();
 
+    ArrayList<String> RiwayatNama = new ArrayList<>();
+    ArrayList<String> RiwayatKeperluan = new ArrayList<>();
+    ArrayList<Integer> noAntrian = new ArrayList<>();
+
 
 public void SetNama() {
         System.out.print("\n\t\t\t\tNama\t\t: ");
         nama = input.nextLine();
         ListNama.add(nama);
+        RiwayatNama.add(nama);
     }
 
     public void SetKeperluan() {
@@ -26,6 +32,7 @@ public void SetNama() {
         System.out.print("\t\t\t\tKeperluan\t: ");
         keperluan = input.nextLine();
         ListKeperluan.add(keperluan);
+        RiwayatKeperluan.add(nama);
     }
 
     public void SetNo() {
