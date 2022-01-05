@@ -13,13 +13,13 @@ public class Main {
             System.out.println("\t\t============================================================");
             int menu;
             do{
-                System.out.println("\n\n");
-                System.out.println("\t\t\t\t\tPilih menu : ");
-                System.out.println("\t\t\t\t1. Pengambilan nomor antri");
+                System.out.println("\n");
+                System.out.println("\t\tPilih menu : ");
+                System.out.println("\n\t\t\t\t1. Pengambilan nomor antri");
                 System.out.println("\t\t\t\t2. Pemanggilan nomor antri");
                 System.out.println("\t\t\t\t3. Lihat data antrian");
                 System.out.println("\t\t\t\t4. Keluar");
-                System.out.print("\t\t\t\t     Pilihan Anda : ");
+                System.out.print("\n\t\tPilihan Anda : ");
 
                 menu = input.nextInt();
 

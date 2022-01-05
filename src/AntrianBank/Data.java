@@ -16,17 +16,14 @@ public class Data {
 
 
 public void SetNama() {
-        System.out.print("\t\t\tNama : ");
+        System.out.print("\n\t\t\t\tNama\t\t: ");
         nama = input.nextLine();
         ListNama.add(nama);
     }
 
     public void SetKeperluan() {
 
-        System.out.print("\t\t\t\tKeperluan \t: ");
-
-        System.out.print("\t\t\tKeperluan : ");
-
+        System.out.print("\t\t\t\tKeperluan\t: ");
         keperluan = input.nextLine();
         ListKeperluan.add(keperluan);
     }
@@ -45,10 +42,8 @@ public void SetNama() {
             System.out.println("\t\t\t========================================================");
             for (int i = 0; i < ListNama.size(); i++) {
                 System.out.print("\t\t\t"+ListNama.toArray()[i]+"\t|\t"+ListKeperluan.toArray()[i]+"\t|\t"+ListNo.toArray()[i]);
-                System.out.println("\n");
             }
-            System.out.print("\t\t\t========================================================");
-            System.out.println("Maaf Data Masih Kosong");
+            System.out.print("\n\t\t\t========================================================");
         }
     }
 
