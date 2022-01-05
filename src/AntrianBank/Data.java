@@ -33,7 +33,7 @@ public class Data {
 
     public void GetData() {
         if (isEmpty()) {
-            System.out.println("\t\t\tMaaf Data Masih Kosong");
+            System.out.println("\n\t\t\tMaaf Data Masih Kosong");
         } else {
             System.out.println("\n\t\t\t========================================================");
             System.out.print("\t\t\tNama\t|\tKeperluan\t|\tNo Antri\n");
