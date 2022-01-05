@@ -44,13 +44,13 @@ public void SetNama() {
         if (isEmpty()) {
             System.out.println("\n\t\t\tMaaf Data Masih Kosong");
         } else {
-            System.out.println("\n\t\t\t========================================================");
+            System.out.println("\n\t\t\t================================================");
             System.out.print("\t\t\tNama\t|\tKeperluan\t|\tNo Antri\n");
-            System.out.println("\t\t\t========================================================");
+            System.out.println("\t\t\t================================================");
             for (int i = 0; i < ListNama.size(); i++) {
                 System.out.print("\t\t\t"+ListNama.toArray()[i]+"\t|\t"+ListKeperluan.toArray()[i]+"\t|\t"+ListNo.toArray()[i]);
             }
-            System.out.print("\n\t\t\t========================================================");
+            System.out.print("\n\t\t\t================================================");
         }
     }
 

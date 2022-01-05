@@ -1,5 +1,6 @@
 package AntrianBank;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -8,10 +9,10 @@ public class Main {
         Riwayat riwayat = new Riwayat();
         try (Scanner input = new Scanner(System.in)) {
 
-            System.out.println("\n\t\t============================================================");
+            System.out.println("\n\t\t====================================================");
             System.out.println("\t\t\t\t\t Selamat datang di Bank");
             System.out.println("\t\t\t\tMemberikan pelayanan yang terbaik");
-            System.out.println("\t\t============================================================");
+            System.out.println("\t\t====================================================");
             int menu;
             do{
                 System.out.println("\n");
@@ -41,7 +42,9 @@ public class Main {
                 }else{
                     System.out.println("\n\t\t\t\tPerhatikan data yang Anda inputkan!!!!");
                 }
-            }while(menu!=4);
+            }while(menu!=5);
+        }catch (InputMismatchException e){
+            System.out.println("\n\t\t\t\tPerhatikan data yang Anda inputkan!!!!");
         }
     }
 }
