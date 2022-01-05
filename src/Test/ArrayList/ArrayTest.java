@@ -1,4 +1,4 @@
-package Test.ArrayList2D;
+package Test.ArrayList;
 import java.util.ArrayList;
 public class ArrayTest {
     public static void main(String[] args) {

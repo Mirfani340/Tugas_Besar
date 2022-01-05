@@ -1,4 +1,4 @@
-package Contoh2;
+package Test.Contoh2;
 
 public abstract class Keperluan {
     private String keperluan;

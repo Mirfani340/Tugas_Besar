@@ -1,4 +1,4 @@
-package Test.ArrayList2D;
+package Test.ArrayList;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -13,16 +13,12 @@ public class Data {
     ArrayList<String> ListKeperluan = new ArrayList<>();
     Deque<String> DataNama = new ArrayDeque<>();
     Deque<String> DataKeperluan = new  ArrayDeque<>();
-    // Deque<Deque<String>> dual_data = new ArrayDeque();
-    
-    ArrayList<ArrayList<String>> dual_data = new ArrayList<>();
     
     public void SetNama () {
         System.out.print("Nama :");
         nama = input.next();
         ListNama.add(nama);//Input data ke ArrayList
-        // DataNama.add(nama);//Menambahkan Queue
-        dual_data.add(ListNama);
+        DataNama.add(nama);//Menambahkan Queue
     }
 
     public void GetNama() {
@@ -36,8 +32,7 @@ public class Data {
         System.out.print("Keperluan :");
         keperluan = input.next();
         ListKeperluan.add(keperluan);//Input data ke ArrayList
-        // DataKeperluan.add(keperluan);//Menambahkan Queue
-        dual_data.add(ListKeperluan);
+        DataKeperluan.add(keperluan);//Menambahkan Queue
     }
 
     public void GetKeperluan() {
@@ -46,4 +41,9 @@ public class Data {
             System.out.println("\n");
         }
     }
+
+    // public int GetSize() {
+    //     int data = DataNama.size();
+    //     return data;
+    // }
 }

@@ -1,4 +1,4 @@
-package Contoh2;
+package Test.Contoh2;
 
 import java.util.Arrays;
 import java.util.Scanner;

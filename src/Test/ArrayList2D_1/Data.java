@@ -1,4 +1,4 @@
-package ArrayList2D;
+package Test.ArrayList2D_1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
