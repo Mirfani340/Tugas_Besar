@@ -1,8 +1,8 @@
-package ArrayList2D;
-
-public class Dequeue extends Data{
-
-//    Data[][] data = new Data[ListNama][];
+//package ArrayList2D;
+//
+//public class Dequeue extends Data{
+//
+//    Data[] data = new Data[];
 //
 //    int head = 0;
 //    int flag = 1;
@@ -23,4 +23,4 @@ public class Dequeue extends Data{
 //        }
 //        return "No.00" + flag + ", Nama : " + tmp;
 //    }
-}
+//}

@@ -5,7 +5,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Data data = new Data();
-        Dequeue dequeue = new Dequeue();
+        //Dequeue dequeue = new Dequeue();
+
+        Array_List inputan = new Array_List();
+
         try (Scanner input = new Scanner(System.in)) {
             System.out.println("\n\t\t=======================================================================================");
             System.out.println("\t\t\t\t\t Selamat datang di Bank Danamon");
@@ -24,8 +27,10 @@ public class Main {
                 menu = input.nextInt();
 
                 if(menu==1){
-                    data.SetNama();
-                    data.SetKeperluan();
+
+                    inputan.setArray();
+//                    data.SetNama();
+//                    data.SetKeperluan();
                 }else if(menu==2){
                     //dequeue.dequeue();
                 }else if(menu==3){

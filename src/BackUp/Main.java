@@ -1,4 +1,4 @@
-package Contoh2;
+package BackUp;
 
 import java.util.Scanner;
 

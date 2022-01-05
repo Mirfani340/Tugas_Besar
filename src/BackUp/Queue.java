@@ -1,13 +1,20 @@
-package Contoh2;
+package BackUp;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Queue extends Keperluan {
 
+    ArrayList<String> dataa = new ArrayList<>();
+
     String[] data;
     int head = 0;
     int flag = 1;
+
+    public Queue(){
+        dataa = new ArrayList<>();
+    }
 
     public Queue(int jumlah) {
         data = new String[jumlah];
