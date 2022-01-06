@@ -7,10 +7,10 @@ public class Main {
         Queue queue = new Queue();
         Scanner input = new Scanner(System.in); 
 
-            System.out.println("\n\t\t============================================================");
+            System.out.println("\n\t\t====================================================");
             System.out.println("\t\t\t\t\t Selamat datang di Bank");
             System.out.println("\t\t\t\tMemberikan pelayanan yang terbaik");
-            System.out.println("\t\t============================================================");
+            System.out.println("\t\t====================================================");
             int menu;
             boolean status;
             do{
