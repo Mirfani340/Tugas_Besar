@@ -1,18 +1,18 @@
-package AntrianBank;
+package BackUp.Test.AntrianBank_;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Queue queue = new Queue();
-        Scanner input = new Scanner(System.in); 
+        Riwayat riwayat = new Riwayat();
+        try (Scanner input = new Scanner(System.in)) {
 
             System.out.println("\n\t\t============================================================");
             System.out.println("\t\t\t\t\t Selamat datang di Bank");
             System.out.println("\t\t\t\tMemberikan pelayanan yang terbaik");
             System.out.println("\t\t============================================================");
             int menu;
-            boolean status;
             do{
                 System.out.println("\n");
                 System.out.println("\t\tPilih menu : ");
@@ -22,11 +22,12 @@ public class Main {
                 System.out.println("\t\t\t\t4. Cek Riwayat");
                 System.out.println("\t\t\t\t5. Keluar");
                 System.out.print("\n\t\tPilihan Anda : ");
+
                 menu = input.nextInt();
 
                 if(menu==1){
                     queue.SetNo();
-                    queue.NoRiwayat();
+                    riwayat.NoRiwayat();
                     queue.SetNama();
                     queue.SetKeperluan();
                 }else if(menu==2){
@@ -34,13 +35,13 @@ public class Main {
                 }else if(menu==3){
                     queue.GetData();
                 }else if(menu==4){
-                    queue.GetRiwayat();
+                    riwayat.GetRiwayat();
                 }else if(menu==5){
                     System.out.println("\n\t\t\t\tTerimakasih!!!!");
-                    break;
-                }else if(menu>5){
+                }else{
                     System.out.println("\n\t\t\t\tPerhatikan data yang Anda inputkan!!!!");
                 }
-            }while(status = true);
+            }while(menu!=5);
         }
     }
+}

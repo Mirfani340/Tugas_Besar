@@ -1,7 +1,8 @@
-package AntrianBank;
+package BackUp.Test.AntrianBank_;
 
 public class Queue extends Data{
     public void deque() {
+
         if (isEmpty()) {
             System.out.println("\t\t\tMaaf Antrian Masih Kosong");
         }else {
