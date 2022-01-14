@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.Scanner;
+
 import java.util.Queue;
 
 public class Data {
@@ -93,7 +94,7 @@ public class Data {
     Connection connect;
     // Data data = new Data();
     public void dbGetStatus() throws SQLException {
-        connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/quebank", "root", "mirfani340");
+        connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/quebank", "irfan", "root");
         if ( connect != null) {
             System.out.println("\t\t\t\t\tConnection Success");
             

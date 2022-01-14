@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Admin {
     static Scanner input = new Scanner(System.in);
     static Connection connect = null;
@@ -12,25 +14,37 @@ public class Admin {
     boolean granted = false;
     boolean status = false;
 
-        dbGetStatus();
+        try {
+            DBGetStatus();
         do {
         System.out.println("\t\t======================================================");
         System.out.println("\t\t\t\t\t Admin Panel");
         System.out.println("\t\t======================================================");
         System.out.println("\t\t\t1. Login");
         System.out.println("\t\t\t2. Logs");
+        System.out.println("\t\t\t3. Logs");
         System.out.println();
+        menuDBStatus();
         System.out.print("\t\t\tInput : ");
         int userInput = input.nextInt();
             if (userInput == 1) {
                 new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
                 userAdminChecker();
+                Thread.sleep(2000);
                 new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
             } else if (userInput == 2){
                 new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
                 ShowLogs();
+                Thread.sleep(2000);
+            } else if (userInput == 3){
+                System.out.println("Byeeee");
+                break;
             }
         } while (status = true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Cek Koneksi Database anda", "Connection Failed", JOptionPane.WARNING_MESSAGE);
+        }
     }
 
     public static void ShowLogs() throws SQLException {
@@ -38,16 +52,16 @@ public class Admin {
             String QueryShowAllLogs = "select * from quebanklogs";
             Statement statement = connect.createStatement();
             ResultSet resultSetLogs = statement.executeQuery(QueryShowAllLogs);
-
+            System.out.println("\t\t\tNama"+"\tKeperluan"+"\tNoAntri"+"\tDate");
             while (resultSetLogs.next()) {
                 System.out.println("\t\t\t"+resultSetLogs.getString(1)+"\t"+
-                resultSetLogs.getString(2)+"\t"+
+                resultSetLogs.getString(2)+"\t\t"+
                 resultSetLogs.getString(3)+"\t"+
                 resultSetLogs.getString(4));
             }
             
         } else {
-            System.out.println("Tolong login dahulu");
+            System.out.println("\t\t\tTolong login dahulu");
             return;
         }
     }
@@ -70,7 +84,7 @@ public class Admin {
                 System.out.println("\t\t\t\t\tAccess Granted");
                 granted = true;
             } else {
-                System.out.println("Wrong ");
+                System.out.println("\t\tCek password dan username anda");
             }
         }
         return false;
@@ -83,13 +97,21 @@ public class Admin {
         return false;
     }
 
-    public static void dbGetStatus() throws SQLException {
-        connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/quebank", "root", "mirfani340");
-        if ( connect != null) {
-            System.out.println("\t\t\t\t\tConnection Success");
-            
-        } else{
-            System.out.println("Tolong check database dan koneksi anda");
+    public static void DBGetStatus() throws SQLException {
+        connect = DriverManager.getConnection("jdbc:mysql://192.168.1.7:3306/quebank", "irfan", "root");
+            if ( connect != null) {
+                System.out.println("\t\t\t\t\tConnection Success");
+                
+            } else{
+                System.out.println("Tolong check database dan koneksi anda");
+            }
+        }
+
+        public static void menuDBStatus() {
+            if (granted == true) {
+                System.out.println("\t\t\tLogin Berhasil");
+            } else {
+                System.out.println("\t\t\tAnda Belum Login");
+            }
         }
     }
-}

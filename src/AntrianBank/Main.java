@@ -3,12 +3,14 @@ package AntrianBank;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Main {
     public static void main(String[] args) throws SQLException {
         Queue queue = new Queue();
         Scanner input = new Scanner(System.in);
-
-            System.out.println("\n\t\t====================================================");
+            try {
+                System.out.println("\n\t\t====================================================");
             System.out.println("\t\t\t\t\t Selamat datang di Bank");
             System.out.println("\t\t\t\tMemberikan pelayanan yang terbaik");
             System.out.println("\t\t====================================================");
@@ -31,6 +33,7 @@ public class Main {
                     queue.SetNama();
                     queue.SetKeperluan();
                     queue.dbSetData();
+                    System.out.flush();
                 }else if(menu==2){
                     queue.deque();
                 }else if(menu==3){
@@ -44,5 +47,10 @@ public class Main {
                     System.out.println("Perhatikan Input anda");
                 }
             }while(status = true);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Tolong cek koneksi database", "Error", JOptionPane.INFORMATION_MESSAGE);
+                e.getStackTrace();
+            }
+            
         }
     }
