@@ -85,12 +85,12 @@ public class Admin {
                 if (userInpuUsername.equals(username) && userInputPassword.equals(password)) {
                     System.out.println("\t\t\t\t\tAccess Granted");
                     granted = true;
-                } else {
-                    System.out.println("\t\tCek password dan username anda");
-                }
+                } 
             }
+            if (granted == false) {
+                System.out.println("ASASSSSASAS");
+            }   
         }
-        
         return false;
     }
 
