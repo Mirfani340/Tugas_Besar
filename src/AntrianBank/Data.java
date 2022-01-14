@@ -1,5 +1,6 @@
 package AntrianBank;
 
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,8 +23,6 @@ public class Data {
     ArrayList<String> RiwayatKeperluan = new ArrayList<>();
     ArrayList<Integer> noAntrian = new ArrayList<>();
 
-    // ArrayList<ArrayList<String>> Database = new ArrayList<>();
-
     public void SetNama() {
         System.out.print("\n\t\t\t\tNama\t\t: ");
         nama = input.nextLine();
@@ -44,14 +43,13 @@ public class Data {
         return no;
     }
 
-    // public String Database(String DataNama, String DataKeperluan) {
-    //     Data
-    // }
-
-    public void GetData() {
+    public void GetData() throws InterruptedException, IOException {
         if (isEmpty()) {
+            new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
             System.out.println("\n\t\t\tMaaf Data Masih Kosong");
+            Thread.sleep(3000);
         } else {
+            new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
             System.out.println("\n\t\t\t================================================");
             System.out.print("\t\t\tNama\t|\tKeperluan\t|\tNo Antri\n");
             System.out.println("\t\t\t================================================");
@@ -60,6 +58,7 @@ public class Data {
                 System.out.println("\n");
             }
             System.out.print("\n\t\t\t========================================================");
+            Thread.sleep(3000);
         }
     }
 
@@ -68,14 +67,14 @@ public class Data {
         noAntrian.add(numberRiwayat);
         return no;
     }
-    // public String Database (Kalo didalam sini bikin lagi) {
-        
-    // }
 
-    public void GetRiwayat() {
+    public void GetRiwayat() throws InterruptedException, IOException {
         if (noAntrian.isEmpty()) {
+            new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
             System.out.println("\n\t\t\tMaaf Data Masih Kosong");
+            Thread.sleep(2000);
         } else {
+            new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
             System.out.println("\n\t\t\t========================================================");
             System.out.print("\t\t\tNama\t|\tKeperluan\t|\tNo Antri\n");
             System.out.println("\t\t\t========================================================");
@@ -84,6 +83,7 @@ public class Data {
                 System.out.println("\n");
             }
             System.out.print("\n\t\t\t================================================");
+            Thread.sleep(3000);
         }
     }
 
@@ -92,7 +92,6 @@ public class Data {
     }
 
     Connection connect;
-    // Data data = new Data();
     public void dbGetStatus() throws SQLException {
         connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/quebank", "irfan", "root");
         if ( connect != null) {
