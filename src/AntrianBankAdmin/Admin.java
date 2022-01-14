@@ -22,7 +22,7 @@ public class Admin {
         System.out.println("\t\t======================================================");
         System.out.println("\t\t\t1. Login");
         System.out.println("\t\t\t2. Logs");
-        System.out.println("\t\t\t3. Logs");
+        System.out.println("\t\t\t3. Exit");
         System.out.println();
         menuDBStatus();
         System.out.print("\t\t\tInput : ");
