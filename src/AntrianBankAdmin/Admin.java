@@ -67,26 +67,30 @@ public class Admin {
     }
 
     public static boolean userAdminChecker() throws SQLException {
-        System.out.print("\t\t\tUsername :");
-        String userInpuUsername = input.next();
+        if (granted == true) {
+            System.out.println("\t\t\tAnda sudah login ");
+        } else {
+            System.out.print("\t\t\tUsername :");
+            String userInpuUsername = input.next();
     
-        System.out.print("\t\t\tPassword :");
-        String userInputPassword = input.next();
+            System.out.print("\t\t\tPassword :");
+            String userInputPassword = input.next();
     
-        Statement statement = connect.createStatement();
-        String QueryStringUserChecker = "select * from userAdmin";
-        ResultSet resultSet = statement.executeQuery(QueryStringUserChecker);
-
-        while (resultSet.next()) {
-            String username = resultSet.getString("username");
-            String password = resultSet.getString("password");
-            if (userInpuUsername.equals(username) && userInputPassword.equals(password)) {
-                System.out.println("\t\t\t\t\tAccess Granted");
-                granted = true;
-            } else {
-                System.out.println("\t\tCek password dan username anda");
+            Statement statement = connect.createStatement();
+            String QueryStringUserChecker = "select * from userAdmin";
+            ResultSet resultSet = statement.executeQuery(QueryStringUserChecker);
+            while (resultSet.next()) {
+                String username = resultSet.getString("username");
+                String password = resultSet.getString("password");
+                if (userInpuUsername.equals(username) && userInputPassword.equals(password)) {
+                    System.out.println("\t\t\t\t\tAccess Granted");
+                    granted = true;
+                } else {
+                    System.out.println("\t\tCek password dan username anda");
+                }
             }
         }
+        
         return false;
     }
 
