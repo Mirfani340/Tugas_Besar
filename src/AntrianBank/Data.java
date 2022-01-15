@@ -82,7 +82,7 @@ public class Data {
                 System.out.print("\t\t\t"+RiwayatNama.get(i)+"\t|\t"+RiwayatKeperluan.get(i)+"\t\t|\t"+noAntrian.get(i));
                 System.out.println("\n");
             }
-            System.out.print("\n\t\t\t================================================");
+            System.out.print("\n\t\t\t========================================================");
             Thread.sleep(3000);
         }
     }
