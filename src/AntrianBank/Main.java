@@ -33,7 +33,6 @@ public class Main {
                     queue.SetNama();
                     queue.SetKeperluan();
                     queue.dbSetData();
-                    System.out.flush();
                 }else if(menu==2){
                     queue.deque();
                 }else if(menu==3){
